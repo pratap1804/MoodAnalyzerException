@@ -13,13 +13,17 @@ public class MoodAnalyzer {
 		super();
 	}
 
-	public String analyseMood(String string) {
-		if(string  == "sad") {
+	public String analyseMood() {
+		try {
+		if(message.contains("sad")) {
 		return "SAD";
 		} else {
 			return "HAPPY";
 		}
+	} catch(NullPointerException e) {
+		return "HAPPY";
 	}
+}
     public static void main(String[]args) {
     	System.out.println("welcome to the exception handling!");
     }
